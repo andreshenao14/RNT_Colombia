@@ -7,7 +7,8 @@ import plotly as pl
 import matplotlib as mp
 import plotly.express as px
 
-Ruta =  "RNT_Final.csv"
+Ruta = st.file_uploader("RNT_Final_.rar")
+#Ruta =  "RNT__Final.csv"
 RNT= pd.read_csv(Ruta,sep=";",encoding='utf-8')#, on_bad_lines='skip')
 RNT=RNT.dropna()
 
@@ -194,7 +195,7 @@ st.plotly_chart(fig7, use_container_width=True)
 #st.plotly_chart(fig2, use_container_width=True)
 
 df_dep = df_filtered3.groupby("DEPARTAMENTO")["CODIGO_RNT"].count().reset_index()
-df_dep.columns = ["DEPARTAMENTO", "Total de Registros"]
+df_dep.columns = ["DEPARTAMENTO", "Número de Registros"]
 
 st.dataframe(df_dep)
 
