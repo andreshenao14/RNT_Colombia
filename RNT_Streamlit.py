@@ -12,9 +12,9 @@ Ruta = st.file_uploader("Sube un archivo CSV", type=["csv"])
 # Leer archivo
 if Ruta is not None:
     RNT = pd.read_csv(Ruta)
-    #st.dataframe(RNT)
+    st.dataframe(RNT)
   
-#Ruta = st.file_uploader("RNT_Final_.rar")
+#Ruta = st.file_uploader("RNT_Final.rar")
 
 #Ruta =  "RNT__Final.csv"
 #RNT= pd.read_csv(Ruta,sep=";",encoding='utf-8')#, on_bad_lines='skip')
